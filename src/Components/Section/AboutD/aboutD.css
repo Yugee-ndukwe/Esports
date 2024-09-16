@@ -1,0 +1,128 @@
+.d-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.d-container.scrolled-overlay {
+    opacity: 1;
+    animation: showOverlay 0.5s forwards;
+}
+
+.d-container.scrolled-content .d-content .d-text,
+.d-container.scrolled-content .d-content .d-image {
+    opacity: 0;
+}
+
+.d-container.scrolled-content .d-content .d-text {
+    animation: fadeInText 1s forwards;
+    animation-delay: 0.5s; /* Delay for text to appear after overlay */
+}
+
+.d-container.scrolled-content .d-content .d-image {
+    animation: fadeInImage 1s forwards;
+    animation-delay: 1.5s; /* Delay for image to appear after text */
+}
+
+@keyframes showOverlay {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInImage {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.d-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid yellow;
+    position: relative;
+    z-index: 1;
+}
+
+.d-content::before {
+    content: '';
+    background-color: #11161E;
+    position: absolute;
+    width: 65%;
+    right: 0;
+    top: 10%;
+    height: 100%;
+    z-index: -1;
+}
+
+.d-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    margin-left: 15px;
+    color: #fff;
+
+}
+
+.d-text h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    padding: 20px;
+    margin: 10px;
+}
+
+.d-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.d-image img {
+    width: 100%;
+    height: auto; /* Adjust if needed */
+}
+
+.d-image::after {
+    content: url(../../../Assets/IMAGES/video-icon.svg);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    align-items: center;
+    background-color: #BABCD4;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}

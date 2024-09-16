@@ -1,0 +1,240 @@
+.articles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10%;
+    padding: 20px;
+    /* border: 2px solid yellowgreen; */
+}
+
+.article-first-row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.article-first-row::before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    width: 50%;
+    top: 0;
+    height: 100%;
+    background-color: #11161E;
+    left: 0;
+    z-index: -1;
+}
+
+.article-first-content{
+    width: 100%;
+    padding: 20px;
+    /* border: 4px solid white; */
+}
+
+.content-row{
+    /* width: 100%; */
+    display: flex;
+    padding: 20px;
+    /* border: 4px solid pink; */
+    font-weight: 600;
+}
+
+.fade-in {
+    opacity: 1; /* Fade in the element */
+    transform: translateY(0); /* Move up */
+}
+.content-row.fade-in {
+    opacity: 1; /* Fade in the content */
+}
+
+.title-news{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+
+
+.title-news h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.title-news button{
+    border: 0;
+    outline: 0;
+    width: 170px;
+    height: 60px;
+    padding: 5px;
+    color: #fff;
+    background: #F32C46;
+    text-transform: uppercase;
+    border-radius: 7px;
+}
+
+.title-news .fade-in{
+    animation: fadeIn 0.5s ease;
+}
+
+.content-container{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    /* transition: transform 0.3s ease-in-out; */
+}
+
+.content-first-image{
+    width: 100%;
+    height: 100%;
+}
+
+.content-first-image img{
+    width: 100%;
+    transition: transform 0.1s 0.1s ease;
+}
+
+/* .content-first-image img:hover {
+    transform: scale(1.01);
+    z-index: 1;
+} */
+
+.below-first-image{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-merch{
+    border: 0;
+    outline: 0;
+    width: 80px;
+    height: 50px;
+    color: #fff;
+    background: #F32C46;
+    padding: 5px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.last-text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   /* text-align: center; */
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 7px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Scale up the entire content container when hovered */
+.content-first-image img:hover  {
+    transform: scale(1.05);
+    z-index: 1;
+    cursor: pointer;
+   
+}
+
+
+
+/* Change the color of the last text when hovering over the content-container */
+.content-container:hover .last-text {
+    color: #F32C46; 
+    
+}
+
+.article-news{
+    width: 100%;
+    /* border: 2px solid blue; */
+    padding: 20px;
+}
+
+.news-content{
+    display: flex;
+    justify-content: space-between;
+   
+    gap: 20px;
+    
+    color: #fff;
+}
+
+.news-image{
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+.news-image:hover {
+    transform: scale(1.1);
+    color: #F32C46;
+}
+
+.news-image img{
+    width: 100%;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+
+
+
+@media(max-width:765px){
+    .article-first-row::before{
+        content: '';
+        width: 100%;
+        position: absolute;
+        width: 50%;
+        top: 0;
+        height: 100%;
+        background-color: #11161E;
+        left: 0;
+        z-index: -1;
+    }
+    .title-news{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .title-news button{
+        border: 0;
+        outline: 0;
+        width: 350px;
+        height: 60px;
+        
+    }
+
+    .last-text{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       /* text-align: center; */
+        font-size: 16px;
+        text-transform: uppercase;
+        margin: 7px 0;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .news-content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
