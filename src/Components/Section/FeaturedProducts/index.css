@@ -27,6 +27,24 @@
     animation-delay: 1.5s; /* Delay for image to appear after text */
 }
 
+
+/* fade in animation for product-shop row */
+
+.product-container.scrolled-content .product-shop .product-text,
+.product-container.scrolled-content .products .items {
+    opacity: 0;
+}
+
+.product-container.scrolled-content .product-shop .product-text {
+    animation: fadeInText 1s forwards;
+    animation-delay: 0.5s; /* Delay for text to appear after overlay */
+}
+
+.product-container.scrolled-content .product-shop .items {
+    animation: fadeInImage 1s forwards;
+    animation-delay: 1.5s; /* Delay for image to appear after text */
+}
+
 @keyframes showOverlay {
     0% {
         opacity: 0;
@@ -92,6 +110,7 @@
     letter-spacing: 2px;
     font-size: 40px;
     padding: 20px;
+    font-family: Chakra Petch;
 }
 
 .items{

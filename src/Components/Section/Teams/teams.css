@@ -1,32 +1,28 @@
-.teams-container{
+.teams-container {
     width: 100%;
     display: flex;
     justify-content: center;
-
     align-items: center;
     margin-top: 10%;
     padding: 20px;
+    opacity: 0; /* Initially hidden */
 }
 
 .teams-container.scrolled-overlay {
-    opacity: 1;
+    opacity: 1; /* Fully visible */
     animation: showOverlay 0.5s forwards;
 }
 
-.teams-container.scrolled-content .teams-content .teams-text,
-.teams-container.scrolled-content .teams-content .teams-image {
-    opacity: 1;
-    /* animation: none; */
-}
-
-.teams-container.scrolled-content .teams-content .teams-text {
+.teams-container.scrolled-content .teams-text {
+    opacity: 0; /* Start hidden */
     animation: fadeInText 1s forwards;
-    animation-delay: 0.5s; 
+    animation-delay: 0.5s; /* Delay to stagger the animations */
 }
 
-.teams-container.scrolled-content .teams-content .teams-image {
-    animation: fadeeInImage 1s forwards;
-    animation-delay: 1.5s; 
+.teams-container.scrolled-content .teams-image {
+    opacity: 0; /* Start hidden */
+    animation: fadeInImage 1s forwards;
+    animation-delay: 1.5s; /* Delay to stagger the animations */
 }
 
 @keyframes showOverlay {
@@ -62,16 +58,15 @@
     }
 }
 
-.teams-content{
+.teams-content {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 20px;
-
 }
 
-.teams-text{
+.teams-text {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -80,30 +75,24 @@
     letter-spacing: 2px;
 }
 
-.text{
-   color: #fff;
-   display: flex;
-   flex-direction: column;
-   align-items: start;
-   width: 50%;
-   
+.text {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 50%;
 }
 
-.text h3{
-   text-transform: uppercase;
-   font-weight: 900;
+.text h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+}
 
-    
- }
+.text p {
+    font-size: 18px;
+}
 
- .text p{
-   
-   font-size: 18px;
- 
-     
-  }
-
-.t-btn{
+.t-btn {
     width: 190px;
     color: #fff;
     background: #f32c46;
@@ -118,22 +107,22 @@
     letter-spacing: 1px;
 }
 
-
-@media(max-width: 675px){
-    .teams-text{
+@media (max-width: 675px) {
+    .teams-text {
         display: flex;
-        flex-wrap: wrap;    
+        flex-wrap: wrap;
     }
 
-    .text{
+    .text {
         width: 100%;
     }
-    
-    .t-btn{
+
+    .t-btn {
         width: 350px;
     }
 }
-.teams-image{
+
+.teams-image {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -141,19 +130,18 @@
     margin: 10px 0;
 }
 
-.members{
+.members {
     width: 100%;
     height: 100%;
     position: relative;
     overflow: hidden;
 }
 
-.members img{
+.members img {
     width: 100%;
-   
 }
 
-.members::before{
+.members::before {
     content: "";
     position: absolute;
     top: 0;
@@ -164,7 +152,8 @@
     z-index: 1;
     transition: all 0.5s ease;
 }
-.members:hover::before{
+
+.members:hover::before {
     animation: slideOut 0.5s forwards;
     z-index: 2;
 }
@@ -181,10 +170,9 @@
     text-transform: uppercase;
     font-family: Chakra Petch;
     font-weight: 600;
-
 }
 
-.member-icon{
+.member-icon {
     color: #fff;
     background: #f32c46;
     padding: 3px;
@@ -192,19 +180,15 @@
     width: 35px;
     height: 35px;
     margin: 0 5px;
-    /* font-weight: 900; */
-    
 }
 
-.member-icon:hover{
+.member-icon:hover {
     background: #fff;
     color: #f32c46;
     cursor: pointer;
-   
-    
 }
 
-.members .icons{
+.members .icons {
     position: absolute;
     bottom: -45px; /* Start with icons out of view */
     left: 50%;
@@ -212,29 +196,13 @@
     z-index: 3;
     opacity: 0;
     transition: all 0.5s ease;
-    
-
 }
 
-.members:hover .icons{
+.members:hover .icons {
     bottom: 10px; /* Move icons into view on hover */
     opacity: 1;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Keyframes for background slide out */
 @keyframes slideOut {
     0% {
         top: 0;
@@ -243,11 +211,3 @@
         top: 100%;
     }
 }
-
-
-
-
-
-
-
-
