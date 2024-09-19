@@ -1,11 +1,27 @@
 body {
   margin: 0;
   background-color: #000 !important;
+  /* font-family: 'chakra petch', 'barlow'; */
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
+}
+h1, h2, h3{
+  font-family: Chakra Petch;
+  
+}
+
+p{
+  font-family: Barlow;
+}
+span{
+  font-family: Barlow;
+}
+button{
+  font-family: Barlow;
+
 }
 
 /* code {

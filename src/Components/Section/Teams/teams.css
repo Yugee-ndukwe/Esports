@@ -1,0 +1,253 @@
+.teams-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    margin-top: 10%;
+    padding: 20px;
+}
+
+.teams-container.scrolled-overlay {
+    opacity: 1;
+    animation: showOverlay 0.5s forwards;
+}
+
+.teams-container.scrolled-content .teams-content .teams-text,
+.teams-container.scrolled-content .teams-content .teams-image {
+    opacity: 1;
+    /* animation: none; */
+}
+
+.teams-container.scrolled-content .teams-content .teams-text {
+    animation: fadeInText 1s forwards;
+    animation-delay: 0.5s; 
+}
+
+.teams-container.scrolled-content .teams-content .teams-image {
+    animation: fadeeInImage 1s forwards;
+    animation-delay: 1.5s; 
+}
+
+@keyframes showOverlay {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInImage {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.teams-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+
+}
+
+.teams-text{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    letter-spacing: 2px;
+}
+
+.text{
+   color: #fff;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   width: 50%;
+   
+}
+
+.text h3{
+   text-transform: uppercase;
+   font-weight: 900;
+
+    
+ }
+
+ .text p{
+   
+   font-size: 18px;
+ 
+     
+  }
+
+.t-btn{
+    width: 190px;
+    color: #fff;
+    background: #f32c46;
+    height: 70px;
+    padding: 5px;
+    font-family: Chakra Petch;
+    border: 0;
+    outline: 0;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+@media(max-width: 675px){
+    .teams-text{
+        display: flex;
+        flex-wrap: wrap;    
+    }
+
+    .text{
+        width: 100%;
+    }
+    
+    .t-btn{
+        width: 350px;
+    }
+}
+.teams-image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.members{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.members img{
+    width: 100%;
+   
+}
+
+.members::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+.members:hover::before{
+    animation: slideOut 0.5s forwards;
+    z-index: 2;
+}
+
+.member-name {
+    position: absolute;
+    bottom: 40%;
+    left: 30%;
+    color: #ccc;
+    padding: 5px 0;
+    font-size: 30px;
+    border-radius: 5px;
+    z-index: 2;
+    text-transform: uppercase;
+    font-family: Chakra Petch;
+    font-weight: 600;
+
+}
+
+.member-icon{
+    color: #fff;
+    background: #f32c46;
+    padding: 3px;
+    font-size: 40px;
+    width: 35px;
+    height: 35px;
+    margin: 0 5px;
+    /* font-weight: 900; */
+    
+}
+
+.member-icon:hover{
+    background: #fff;
+    color: #f32c46;
+    cursor: pointer;
+   
+    
+}
+
+.members .icons{
+    position: absolute;
+    bottom: -45px; /* Start with icons out of view */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.5s ease;
+    
+
+}
+
+.members:hover .icons{
+    bottom: 10px; /* Move icons into view on hover */
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Keyframes for background slide out */
+@keyframes slideOut {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+
+
+
+
+
+
+

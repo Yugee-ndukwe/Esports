@@ -1,29 +1,29 @@
-.d-container {
+.award-container{
     width: 100%;
     display: flex;
-    justify-content: center;
+    margin-top: 10%;
     align-items: center;
-    margin-top: 50px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    justify-content: center;
+    padding: 20px;
+
 }
 
-.d-container.scrolled-overlay {
+.award-container.scrolled-overlay {
     opacity: 1;
     animation: showOverlay 0.5s forwards;
 }
 
-.d-container.scrolled-content .d-content .d-text,
-.d-container.scrolled-content .d-content .d-image {
+.award-container.scrolled-content .award-content .award-text,
+.award-container.scrolled-content .award-content .awards {
     opacity: 0;
 }
 
-.d-container.scrolled-content .d-content .d-text {
+.award-container.scrolled-content .award-content .award-text {
     animation: fadeInText 1s forwards;
     animation-delay: 0.5s; /* Delay for text to appear after overlay */
 }
 
-.d-container.scrolled-content .d-content .d-image {
+.award-container.scrolled-content .award-content .awards {
     animation: fadeInImage 1s forwards;
     animation-delay: 1.5s; /* Delay for image to appear after text */
 }
@@ -62,67 +62,73 @@
 }
 
 
-.d-content {
+.award-content{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    /* border: 2px solid yellow; */
     position: relative;
     z-index: 1;
 }
 
-.d-content::before {
+.award-content::before{
     content: '';
     background-color: #11161E;
-    position: absolute;
-    width: 65%;
-    right: 0;
-    top: 10%;
     height: 100%;
+    top: 0;
+    left: 0;
+    width: 45%;
+    
+    position: absolute;
     z-index: -1;
 }
 
-.d-text {
+.award-text{
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    letter-spacing: 2px;
-    margin-left: 15px;
     color: #fff;
-
+    /* width: 100%; */
+    /* margin: auto; */
+    text-align: center;
 }
 
-.d-text h1 {
-    font-size: 40px;
-    text-transform: uppercase;
-    padding: 20px;
-    margin: 10px;
+.award-text h1{
+   font-size: 40px;
+   font-weight: 900;
+   padding: 10px;
+   text-transform: uppercase;
+   
 }
 
-.d-image {
-    position: relative;
-    width: 100%;
-    height: 100%;
+.award-text p{
+    font-size: 18px;
+    padding: 10px 0;
+   
 }
 
-.d-image img {
-    width: 100%;
-    height: auto; /* Adjust if needed */
-}
-
-.d-image::after {
-    content: url(../../../Assets/IMAGES/video-icon.svg);
-    width: 100px;
-    height: 100px;
-    position: absolute;
+.awards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    background-color: #BABCD4;
-    border-radius: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    padding: 20px 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.medal{
+    width: 100%;
+}
+.medal img{
+    width: 100%;
+}
+
+.awards p{
+    font-family: Chakra Petch;
+    font-size: 20px;
+    padding: 10px 0;
+    font-weight: 600;
 }

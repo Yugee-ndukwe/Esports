@@ -1,6 +1,4 @@
 import '../Hero/hero.css';
-import Mynav from '../Navbar/navbar';
-import HomeSponsor from '../Section/homeSponsor';
 
 export function Hero({
     className,
@@ -11,27 +9,33 @@ export function Hero({
     secondBtn,
     firstBtnClass,
     secondBtnClass,
-    textColumnClass 
+    textColumnClass,
+    containerClass, // Dynamically passed container class
+    rowClass        // Dynamically passed row class
 }) {
     return (
-        <>
-        {/* <Mynav/> */}
-        <div className={className} style={{ backgroundImage: `url(${heroImg})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', width: '100%' }}>
-            <div className="row hero-content">
-                <div className={textColumnClass + " hero-text"}>
-                    <h1>{title}</h1>
-                    <p>{text}</p>
-                    {firstBtn || secondBtn ? ( // Check if buttons should be rendered
-                        <div className='hero-btn'>
-                            {firstBtn && <button className={firstBtnClass}>{firstBtn}</button>}
-                            {secondBtn && <button className={secondBtnClass}>{secondBtn}</button>}
-                        </div>
-                    ) : null}
+        <div className={className} style={{
+            backgroundImage: `url(${heroImg})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            width: '100%',
+            height: '100vh'
+        }}>
+            <div className={containerClass}>
+                <div className={rowClass}>
+                    <div className={textColumnClass}>
+                        <h1>{title}</h1>
+                        <p>{text}</p>
+                        {(firstBtn || secondBtn) && (
+                            <div className='hero-btn'>
+                                {firstBtn && <button className={firstBtnClass}>{firstBtn}</button>}
+                                {secondBtn && <button className={secondBtnClass}>{secondBtn}</button>}
+                            </div>
+                        )}
+                    </div>
                 </div>
-                
             </div>
-            
         </div>
-        </>
     );
 }

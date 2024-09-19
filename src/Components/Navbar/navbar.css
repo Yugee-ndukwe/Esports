@@ -66,6 +66,8 @@ nav.scrolled {
   /* color: #fff; */
   text-decoration: none;
   padding: 10px;
+  font-family: Barlow;
+
 }
 
 .nav-link:hover {
