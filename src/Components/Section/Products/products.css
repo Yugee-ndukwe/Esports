@@ -1,0 +1,112 @@
+.sub-container {
+    width: 100%;
+    background-image: url(../../../Assets/IMAGES/last-bg.jpeg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 0;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out; /* Smooth transition */
+}
+
+@media(min-width: 765px){
+    .sub-container{
+        height: 80vh;
+    }
+}
+
+.sub-container.visible {
+    opacity: 1; /* Make the background visible when the section is in view */
+}
+
+.sub-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.sub-text {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 50px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Push down slightly */
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out; /* Animation for text */
+}
+
+.sub-text.visible {
+    opacity: 1;
+    transform: translateY(0); /* Bring text back to its original position */
+}
+
+.sub-item {
+    width: 100%;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Push down slightly */
+    transition: opacity 0.8s ease-in-out 0.2s, transform 0.8s ease-in-out 0.2s; /* Animation for input and button */
+}
+
+.sub-item.visible {
+    opacity: 1;
+    transform: translateY(0); /* Bring input and button back to their original position */
+}
+
+.sub-text h1 {
+    font-weight: 900;
+    font-size: 50px;
+}
+
+.sub-item input {
+    width: 350px;
+    border: 0;
+    outline: 0;
+    height: 70px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-family: Barlow;
+}
+
+.sub-item .last-btn {
+    width: 120px;
+    border: 0;
+    outline: 0;
+    height: 70px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    background: #f32c46;
+    color: #fff;
+    font-weight: 600;
+    font-family: Chakra Petch;
+}
+
+.last-btn:hover {
+    animation: pulse 0.2s 0.7s ease;
+}
+
+/* Responsive design */
+@media (max-width: 764px) {
+    .sub-text {
+       text-align: center;
+    }
+    .sub-text h1 {
+        font-weight: 600;
+        font-size: 30px;
+        padding: 10px;
+    }
+    .sub-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+    .sub-item .last-btn {
+        width: 350px;
+        padding: 10px 0;
+    }
+}

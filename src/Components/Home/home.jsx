@@ -23,9 +23,11 @@ export default function Home(){
         <>
             <Mynav/>
             <Hero
-                className= 'hero'
+                className= 'hero home-hero'
+                containerClass='home-container'   // Custom container class for partners page
+                rowClass='home-row' 
                 heroImg={HOME_BG}
-                textColumnClass= 'col-12 col-lg-5'
+                textColumnClass= 'col-12 col-lg-6 home-text'
                 title= 'NEXT-GENERATION ESPORTS TEAM'
                 text= 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et quis odio vestibulum nunc, neque integer purus.'
                 firstBtnClass= 'buy-btn'
@@ -39,6 +41,7 @@ export default function Home(){
             <Articles/>
             <Support/>
             <FeaturedProducts
+            cName= 'row products'
             title= 'featured product'
             className= 'items'
             P1= {P1}

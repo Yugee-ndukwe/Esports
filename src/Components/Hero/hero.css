@@ -21,4 +21,24 @@
 
 .hero p{
     font-size: 18px;
+    padding: 10px 0;
+}
+
+.hero-btn{
+    font-family: Chakra Petch;
+    width: 100%;
+    display: flex; /* Ensure the container is a flexbox */
+    justify-content: flex-start; /* Align buttons to the start of the row */
+    align-items: center; /* Vertically center the buttons */
+    gap: 20px; /* Add space between buttons */
+    padding: 20px;
+}
+
+@media(max-width: 576px){
+    .hero-btn{
+       
+        display: flex; /* Ensure the container is a flexbox */
+        flex-wrap: wrap;
+    }
+
 }

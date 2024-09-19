@@ -4,6 +4,7 @@ import Mynav from "../Navbar/navbar";
 import Instagram from "../Section/Instagram/instagram";
 import BG from '../../Assets/IMAGES/team-hero.jpeg';
 import './partners.css'; // Separate CSS for the partners page
+import Sponsors from "../Section/Sponsors/sponsors";
 
 export default function Partners() {
     return (
@@ -18,6 +19,7 @@ export default function Partners() {
                 title='Sponsors'
                 text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et quis odio vestibulum nunc, neque integer purus.'
             />
+            <Sponsors/>
             <Instagram />
             <Footer />
         </>

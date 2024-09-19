@@ -1,0 +1,62 @@
+.sponsor-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Add initial opacity and transition */
+.sponsor-container {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    transform: translateY(20px);
+}
+
+/* When the element is visible, apply full opacity */
+.sponsor-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.sponsor-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s-text{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+}
+
+.s-image{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.s-img{
+    width: 100%;
+    padding: 10px;
+}
+
+.s-img img{
+    width: 100%;
+    padding: 0 10px;
+}
+
+
+.second-row{
+    width: 100%;
+    /* max-width: 80%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
