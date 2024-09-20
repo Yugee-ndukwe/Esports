@@ -126,3 +126,12 @@
     transform: translate(-50%, -50%);
     z-index: 1;
 }
+
+@media(max-width: 576px){
+    .d-text h1 {
+        font-size: 30px;
+        text-align: center;
+       
+        
+    }
+}
