@@ -102,7 +102,7 @@
     font-size: 30px;
     text-transform: uppercase;
     padding: 10px;
-    font-weight: 600;
+    font-weight: 900;
 
 }
 
@@ -232,6 +232,8 @@
     color: #fff;
     font-size: 30px;
     font-weight: 600;
+    font-family: Chakra Petch;
+    padding: 5px;
 }
 
 .follow {
@@ -241,6 +243,11 @@
     font-weight: 500;
     text-align: center;
     padding: 20px 0;
+}
+
+.follow p{
+    font-family: Chakra Petch;
+
 }
 
 .btn-container{
@@ -260,6 +267,8 @@
     text-transform: uppercase;
     font-size: 20px;
     border-radius: 7px;
+    font-family: Chakra Petch;
+
     
 }
 
@@ -275,6 +284,10 @@
         justify-content: center;
         align-items: center;
         text-align: center; 
+    }
+
+    .title{
+        font-size: 20px;
     }
 
     .match-items{
