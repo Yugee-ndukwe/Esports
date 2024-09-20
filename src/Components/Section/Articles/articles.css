@@ -1,29 +1,50 @@
-.articles{
+.articles {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     margin-top: 10%;
     padding: 20px;
-    /* border: 2px solid yellowgreen; */
+    opacity: 1; /* Ensure it's visible by default */
 }
 
-.article-first-row{
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Slight movement upwards */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Applying the fade-in animation */
+.fade-in {
+    opacity: 1;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Remove the opacity setting here to prevent content from hiding initially */
+.articles {
+    transition: opacity 1s ease;
+}
+
+.article-first-row {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid red; */
     position: relative;
     z-index: 1;
     padding: 20px;
 }
 
-.article-first-row::before{
+.article-first-row::before {
     content: '';
-    width: 100%;
-    position: absolute;
     width: 50%;
+    position: absolute;
     top: 0;
     height: 100%;
     background-color: #11161E;
@@ -31,29 +52,18 @@
     z-index: -1;
 }
 
-.article-first-content{
+.article-first-content {
     width: 100%;
     padding: 20px;
-    /* border: 4px solid white; */
 }
 
-.content-row{
-    /* width: 100%; */
+.content-row {
     display: flex;
     padding: 20px;
-    /* border: 4px solid pink; */
     font-weight: 600;
 }
 
-.fade-in {
-    opacity: 1; /* Fade in the element */
-    transform: translateY(0); /* Move up */
-}
-.content-row.fade-in {
-    opacity: 1; /* Fade in the content */
-}
-
-.title-news{
+.title-news {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,14 +74,12 @@
     margin-bottom: 40px;
 }
 
-
-
-.title-news h1{
+.title-news h1 {
     font-size: 40px;
     margin-bottom: 10px;
 }
 
-.title-news button{
+.title-news button {
     border: 0;
     outline: 0;
     width: 170px;
@@ -83,33 +91,29 @@
     border-radius: 7px;
 }
 
-.title-news .fade-in{
-    animation: fadeIn 0.5s ease;
-}
-
-.content-container{
+.content-container {
     position: relative;
     z-index: 2;
     color: #fff;
-    /* transition: transform 0.3s ease-in-out; */
 }
 
-.content-first-image{
+.content-first-image {
     width: 100%;
     height: 100%;
 }
 
-.content-first-image img{
+.content-first-image img {
     width: 100%;
     transition: transform 0.1s 0.1s ease;
 }
 
-/* .content-first-image img:hover {
-    transform: scale(1.01);
+.content-first-image img:hover {
+    transform: scale(1.05);
     z-index: 1;
-} */
+    cursor: pointer;
+}
 
-.below-first-image{
+.below-first-image {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -130,56 +134,49 @@
     text-transform: uppercase;
     border-radius: 3px;
     font-size: 16px;
+    font-family: Chakra Petch;
 }
 
-.last-text{
+.last-text {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-   /* text-align: center; */
     font-size: 30px;
     text-transform: uppercase;
     margin: 7px 0;
     transition: color 0.3s ease-in-out;
 }
+.last-text p{
+    font-family: Chakra Petch;
 
-/* Scale up the entire content container when hovered */
-.content-first-image img:hover  {
-    transform: scale(1.05);
-    z-index: 1;
-    cursor: pointer;
-   
 }
 
-
-
-/* Change the color of the last text when hovering over the content-container */
 .content-container:hover .last-text {
-    color: #F32C46; 
-    
+    color: #F32C46;
 }
 
-.article-news{
+.article-news {
     width: 100%;
-    /* border: 2px solid blue; */
     padding: 20px;
 }
 
-.news-content{
+.news-content {
     display: flex;
     justify-content: space-between;
-   
     gap: 20px;
-    
     color: #fff;
 }
 
-.news-image{
+.news-image {
     width: 100%;
     text-transform: uppercase;
     font-size: 18px;
     transition: transform 0.2s ease;
+}
+.news-image p{
+    font-family: Chakra Petch;
+
 }
 
 .news-image:hover {
@@ -187,53 +184,35 @@
     color: #F32C46;
 }
 
-.news-image img{
+.news-image img {
     width: 100%;
     margin-bottom: 20px;
     height: auto;
 }
 
-
-
-
-@media(max-width:765px){
-    .article-first-row::before{
-        content: '';
+/* Media query for responsiveness */
+@media (max-width: 765px) {
+    .article-first-row::before {
         width: 100%;
-        position: absolute;
-        width: 50%;
-        top: 0;
         height: 100%;
         background-color: #11161E;
-        left: 0;
-        z-index: -1;
     }
-    .title-news{
+
+    .title-news {
         display: flex;
         flex-wrap: wrap;
     }
 
-    .title-news button{
-        border: 0;
-        outline: 0;
+    .title-news button {
         width: 350px;
         height: 60px;
-        
     }
 
-    .last-text{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-       /* text-align: center; */
+    .last-text {
         font-size: 16px;
-        text-transform: uppercase;
-        margin: 7px 0;
-        transition: color 0.3s ease-in-out;
     }
 
-    .news-content{
+    .news-content {
         display: flex;
         flex-wrap: wrap;
     }

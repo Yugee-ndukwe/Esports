@@ -47,7 +47,7 @@ export default function Mynav() {
       <nav ref={navLinkRef} className="navbar navbar-expand-lg">
         <div className="ms-auto logo-container">
           <div className="logo-img">
-            <img src={LOGO} alt="logo" style={{ background: 'black' }} />
+            <img src={LOGO} alt="logo" />
           </div>
           <div className="collapse-nav">
             <span onClick={handleClicked}>

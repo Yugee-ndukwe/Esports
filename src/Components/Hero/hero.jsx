@@ -21,7 +21,6 @@ export function Hero({
             backgroundRepeat: 'no-repeat',
             width: '100%',
             // height: '100%'
-            height: '100vh'
         }}>
             <div className={containerClass}>
                 <div className={rowClass}>
