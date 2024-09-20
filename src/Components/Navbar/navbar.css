@@ -83,6 +83,7 @@ nav.scrolled {
   color: #fff;
   border: none;
   cursor: pointer;
+  font-family: Chakra Petch;
 }
 
 .drop-down-link span{
@@ -96,12 +97,12 @@ nav.scrolled {
 .drop-down-menu {
   display: none;
   position: absolute;
-  background-color: #111;
+  background-color: #000;
   width: 100%;
   max-width: 650px;
   padding: 25px;
   z-index: 1000;
-  top: 67%; /* Dropdown appears below the link */
+  top: 65%; /* Dropdown appears below the link */
   left: 35%;
   justify-content: space-between;
 }
@@ -122,11 +123,18 @@ nav.scrolled {
   color: #f32c46;
   padding: 10px 0;
   text-decoration: none;
+  font-family: Chakra Petch;
+
 }
 
 .drop-items{
   margin-top: 10px;
   width: 100%;
+}
+
+.drop-items p{
+  font-family: Chakra Petch;
+  font-weight: 600;
 }
 
 .drop-down-item .drop-items{
