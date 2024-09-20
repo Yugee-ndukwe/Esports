@@ -98,8 +98,9 @@
 .d-text h1 {
     font-size: 40px;
     text-transform: uppercase;
-    padding: 20px;
-    margin: 10px;
+    padding: 10px 0;
+    /* padding: 20px; */
+    /* margin: 10px; */
     font-weight: 900;
 }
 
@@ -129,17 +130,9 @@
 }
 
 @media(max-width: 576px){
-    .d-text {
-       width: 100%;
-        
-        margin-left: 0;
-        text-align: start;
 
-     
-    
-    }
     .d-text h1 {
-        font-size: 20px;
+        font-size: 22px;
         /* text-align: start; */
         /* margin-right: 15px; */
 

@@ -34,13 +34,13 @@ export default function AboutD() {
     return (
         <div ref={sectionRef} className="container-fluid d-container">
             <div className="row d-content">
-                <div className="col-10 col-lg-5">
+                <div className="col-12 col-lg-5">
                     <div className="d-text">
                         <h1>About the Dragon Esports Team</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis convallis tortor, malesuada vitae tortor. Dignissim ac aliquam ut sed eu. Eget nulla elit, ac habitant.</p>
                     </div>
                 </div>
-                <div className="col-10 col-lg-7">
+                <div className="col-12 col-lg-7">
                     <div className="d-image">
                         <img src={VID} alt="video" />
                     </div>
