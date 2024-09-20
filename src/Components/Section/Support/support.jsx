@@ -27,17 +27,18 @@ export default function Support(){
         <>
             <div ref={supportRef} className="container-fluid support" >
                 <div className="row support-content" >
-                    <div className="col-12 col-lg-10 support-items">
+                    <div className="col-12 col-lg-5 support-items">
                         <div className='support-text'>
                         <h1>Get our merch & support our Team</h1>
                         </div>
-                        <div>
-                        <button className="support-btn">get merch </button>
-                        </div>
+                      
                     </div>
-                    {/* <div className="col-12 col-lg-5">
+                    <div className="col-12 col-lg-5">
+                        <div>
+                          <button className="support-btn">get merch </button>
+                        </div>
                         
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </>

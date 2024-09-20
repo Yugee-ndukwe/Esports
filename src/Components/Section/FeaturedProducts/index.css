@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 15%;
     padding: 10px;
 }
 
@@ -124,6 +124,9 @@
     letter-spacing: 0.8px;
 
 }
+.items p{
+    font-family: Chakra Petch;
+}
 
 .name-price{
     /* display: flex;
@@ -167,4 +170,18 @@
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+@media(max-width: 567px){
+    .products::before{
+        content: '';
+        background-color: #11161E;
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        /* top: 20%; */
+       bottom: 32%;
+    }
 }
