@@ -100,6 +100,7 @@
     text-transform: uppercase;
     padding: 20px;
     margin: 10px;
+    font-weight: 900;
 }
 
 .d-image {
@@ -128,9 +129,20 @@
 }
 
 @media(max-width: 576px){
+    .d-text {
+       width: 100%;
+        
+        margin-left: 0;
+        text-align: start;
+
+     
+    
+    }
     .d-text h1 {
-        font-size: 30px;
-        text-align: center;
+        font-size: 20px;
+        /* text-align: start; */
+        /* margin-right: 15px; */
+
        
         
     }
